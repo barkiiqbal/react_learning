@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ChildWithFunc from "./components/child.func";
 import "./App.css";
 import ChildWithClass from "./components/child.class";
+import ChildClassIqbal from "./components/child.class.iqbal";
+import ChildFuncIqbal from "./components/child.func.iqbal";
 
 function App(props) {
 	const [showClassComponent, setShowClassComponent] = useState(false);
@@ -15,7 +17,7 @@ function App(props) {
 	return (
 		<>
 			<div >
-				{!showClassComponent ? <ChildWithFunc num={count} /> : <ChildWithClass num={count} />}
+				{!showClassComponent ? <ChildFuncIqbal num={count} /> : <ChildClassIqbal num={count} />}
 				<button style={{ backgroundColor: "rebeccapurple", color: 'white', marginRight: "8px" }} onClick={increment}>increment</button>
 				<button style={{ backgroundColor: "yellowgreen", marginRight: "8px" }} onClick={toggleClassComponent}>show {showClassComponent ? "functional component" : "class component"}</button>
 			</div>
