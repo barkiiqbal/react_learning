@@ -11,6 +11,7 @@ import {
 import LifeCycle from "./lifecycle";
 import Form, { UncontrolledForm } from "./form";
 import List from "./list";
+import { FormIqbal } from "./form/form.iqbal";
 
 let router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ let router = createBrowserRouter(
       <Route path="form" element={<Form />} />
       <Route path="form/uncontrolled" element={<UncontrolledForm />} />
       <Route path="list" element={<List />} />
+	  <Route path="form/iqbal/controlled" element={<FormIqbal />} />
     </Route>
   )
 );
@@ -41,9 +43,10 @@ function Layout() {
           <Link to="/form">Form controlled</Link>&nbsp;&nbsp;
           <Link to="/form/uncontrolled">Form uncontrolled</Link>&nbsp;&nbsp;
           <Link to="/list">List</Link>&nbsp;&nbsp;
+		  <Link to="/form/iqbal/controlled">Iqbal Controlled</Link>&nbsp;&nbsp;
         </div>
       </nav>
-      <div style={{ textAlign: "center", padding: "16px" }}>
+      <div style={{ backgroundColor:"lightblue", textAlign: "center", padding: "16px" }}>
         <Outlet />
       </div>
 
